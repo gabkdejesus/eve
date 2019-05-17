@@ -12,12 +12,7 @@ module.exports.run = async (bot, message, args) => {
 
     let uPoints = points[message.author.id].points;
 
-    let pointembed = new Discord.RichEmbed()
-    .setAuthor(message.author.username)
-    .setColor('#00FF00')
-    .addField('Points', uPoints);
-
-    message.channel.send(pointembed);
+    return message.reply(`you have ${uPoints} points (´• ω •\`)`);
 }
 
 module.exports.help = {

@@ -38,7 +38,7 @@ bot.on('message', async message => {
     if (message.author.bot) return;
     if (message.channel.type === 'dm') return;
 
-    // Points
+    // Random Point Award System
     if (!points[message.author.id]) {
         points[message.author.id] = {
             points: 0
@@ -47,8 +47,6 @@ bot.on('message', async message => {
 
     let pointAmt = Math.floor(Math.random() * 50);
     let baseAmt = Math.floor(Math.random() * 50);
-    console.log(pointAmt, baseAmt);
-
 
     if (pointAmt === baseAmt) {
         randAmt = Math.floor(Math.random() * 500);
@@ -61,6 +59,8 @@ bot.on('message', async message => {
         
         message.channel.send(`Senpai ${message.author}, I generated ${pointAmt} points for you. You now have ${points[message.author.id]} points. Type !points to find out more.`);
     }
+
+    // End Random Point Award System
 
 
     let prefix = config.prefix;
