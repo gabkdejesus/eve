@@ -1,0 +1,6 @@
+{
+    "token": "NTc4NTMyMTQ1NDQyNzE3Njk2.XN0-ZA.V7kmTj8cR3CKANhrOHoeblnoQzg",
+    "prefix": "!",
+    "commandsDir": "./commands/",
+    "pointsDir": "./points.json"
+ }
